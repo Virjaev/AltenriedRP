@@ -7,26 +7,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #0a0a0a;
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
+        html { scroll-behavior: smooth; }
+        body { background-color: #0a0a0a; color: #ffffff; font-family: 'Inter', sans-serif; }
+        .gold-text { color: #c5a059; }
+        .gold-bg { background-color: #c5a059; }
+        .gold-border { border-color: #c5a059; }
+        .card-gradient { 
+            background: linear-gradient(145deg, #161b22, #0d1117); 
+            border: 1px solid rgba(197, 160, 89, 0.2); 
         }
-        .gold-text {
-            color: #c5a059;
-        }
-        .gold-bg {
-            background-color: #c5a059;
-        }
-        .gold-border {
-            border-color: #c5a059;
-        }
-        .card-gradient {
-            background: linear-gradient(145deg, #161b22, #0d1117);
-            border: 1px solid rgba(197, 160, 89, 0.2);
-        }
-        .hero-overlay {
-            background: radial-gradient(circle, rgba(197, 160, 89, 0.05) 0%, rgba(0,0,0,0) 70%);
+        .hero-overlay { 
+            background: radial-gradient(circle, rgba(197, 160, 89, 0.05) 0%, rgba(0,0,0,0) 70%); 
         }
     </style>
 </head>
@@ -35,22 +26,21 @@
     <!-- Navigation -->
     <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
         <div class="flex items-center space-x-3">
-            <!-- Platzhalter für Logo -->
-            <img src="DEIN_LOGO_NAME.png" alt="Logo" class="w-12 h-12 rounded-full border-2 gold-border shadow-lg shadow-yellow-900/20">
+            <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full border-2 gold-border shadow-lg shadow-yellow-900/20">
             <span class="text-xl font-bold tracking-widest uppercase">Altenried</span>
         </div>
         <div class="hidden md:flex space-x-8 font-medium uppercase text-sm tracking-widest">
             <a href="#" class="hover:text-[#c5a059] transition">Home</a>
-            <a href="#" class="hover:text-[#c5a059] transition">Regelwerk</a>
-            <a href="#" class="hover:text-[#c5a059] transition">Discord</a>
-            <a href="#" class="gold-text border gold-border px-4 py-1 rounded hover:bg-[#c5a059] hover:text-black transition">Join Now</a>
+            <a href="#team" class="hover:text-[#c5a059] transition">Team</a>
+            <a href="https://discord.gg/QxXQZrNNr7" target="_blank" class="hover:text-[#c5a059] transition">Discord</a>
+            <a href="https://discord.gg/QxXQZrNNr7" target="_blank" class="gold-text border gold-border px-4 py-1 rounded hover:bg-[#c5a059] hover:text-black transition uppercase">Join Now</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative h-[70vh] flex items-center justify-center text-center px-4 hero-overlay">
+    <section class="relative h-[75vh] flex items-center justify-center text-center px-4 hero-overlay">
         <div>
-            <img src="DEIN_LOGO_NAME.png" alt="Altenried Logo" class="w-48 h-48 mx-auto mb-8 drop-shadow-[0_0_25px_rgba(197,160,89,0.3)]">
+            <img src="logo.png" alt="Altenried Logo" class="w-48 h-48 mx-auto mb-8 drop-shadow-[0_0_25px_rgba(197,160,89,0.3)]">
             <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-2">
                 Altenried <span class="gold-text">Roleplay</span>
             </h1>
@@ -58,24 +48,22 @@
                 "Qualität über Quantität"
             </p>
             <div class="mt-10">
-                <button class="gold-bg text-black px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform">
+                <a href="https://discord.gg/QxXQZrNNr7" target="_blank" class="inline-block gold-bg text-black px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-lg shadow-yellow-900/20">
                     Server Beitreten
-                </button>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Team / Personen Sektion -->
-    <section class="max-w-7xl mx-auto py-20 px-4">
+    <section id="team" class="max-w-7xl mx-auto py-20 px-4">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-bold uppercase tracking-widest">Die Projektleitung</h2>
             <div class="h-1 w-20 gold-bg mx-auto mt-4"></div>
         </div>
 
-        <!-- Grid für 6 Personen -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Person 1 -->
+            <!-- Karte 1 -->
             <div class="card-gradient p-8 rounded-2xl text-center hover:translate-y-[-10px] transition-all duration-300">
                 <div class="w-24 h-24 gold-bg rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-black border-4 border-[#161b22]">
                     <i class="fas fa-user-shield"></i>
@@ -85,7 +73,7 @@
                 <p class="text-gray-400 text-sm">Zuständig für die allgemeine Serverentwicklung und Vision.</p>
             </div>
 
-            <!-- Person 2 -->
+            <!-- Karte 2 -->
             <div class="card-gradient p-8 rounded-2xl text-center hover:translate-y-[-10px] transition-all duration-300">
                 <div class="w-24 h-24 gold-bg rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-black border-4 border-[#161b22]">
                     <i class="fas fa-code"></i>
@@ -95,7 +83,7 @@
                 <p class="text-gray-400 text-sm">Verantwortlich für Scripte und die technische Performance.</p>
             </div>
 
-            <!-- Person 3 -->
+            <!-- Karte 3 -->
             <div class="card-gradient p-8 rounded-2xl text-center hover:translate-y-[-10px] transition-all duration-300">
                 <div class="w-24 h-24 gold-bg rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-black border-4 border-[#161b22]">
                     <i class="fas fa-users"></i>
@@ -105,7 +93,7 @@
                 <p class="text-gray-400 text-sm">Ansprechpartner für alle Team- und Spielerbelange.</p>
             </div>
 
-            <!-- Person 4 -->
+            <!-- Karte 4 -->
             <div class="card-gradient p-8 rounded-2xl text-center hover:translate-y-[-10px] transition-all duration-300">
                 <div class="w-24 h-24 gold-bg rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-black border-4 border-[#161b22]">
                     <i class="fas fa-gavel"></i>
@@ -115,7 +103,7 @@
                 <p class="text-gray-400 text-sm">Sorgt für Gerechtigkeit und Hilfe im Roleplay.</p>
             </div>
 
-            <!-- Person 5 -->
+            <!-- Karte 5 -->
             <div class="card-gradient p-8 rounded-2xl text-center hover:translate-y-[-10px] transition-all duration-300">
                 <div class="w-24 h-24 gold-bg rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-black border-4 border-[#161b22]">
                     <i class="fas fa-bullhorn"></i>
@@ -125,7 +113,7 @@
                 <p class="text-gray-400 text-sm">Verantwortlich für Social Media und Community-Growth.</p>
             </div>
 
-            <!-- Person 6 -->
+            <!-- Karte 6 -->
             <div class="card-gradient p-8 rounded-2xl text-center hover:translate-y-[-10px] transition-all duration-300">
                 <div class="w-24 h-24 gold-bg rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-black border-4 border-[#161b22]">
                     <i class="fas fa-paint-brush"></i>
@@ -134,13 +122,12 @@
                 <p class="gold-text text-sm font-medium tracking-widest mb-4">DESIGN</p>
                 <p class="text-gray-400 text-sm">Erstellt Grafiken, Kleidung und Texturen für den Server.</p>
             </div>
-
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="py-10 border-t border-gray-900 text-center text-gray-500 text-sm">
-        <p>&copy; 2023 Altenried Roleplay. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2024 Altenried Roleplay. Alle Rechte vorbehalten.</p>
         <p class="mt-2 tracking-widest uppercase text-[10px]">Qualität über Quantität</p>
     </footer>
 
