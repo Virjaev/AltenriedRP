@@ -14,31 +14,32 @@
         .gold-border { border-color: #c5a059; }
         .card-gradient { 
             background: linear-gradient(145deg, #161b22, #0d1117); 
-            border: 1px solid rgba(197, 160, 89, 0.2); 
+            border: 1px solid rgba(197, 160, 89, 0.1); 
         }
         .hero-overlay { 
             background: radial-gradient(circle, rgba(197, 160, 89, 0.05) 0%, rgba(0,0,0,0) 70%); 
         }
+        .status-searching { color: #ff4d4d; font-style: italic; font-weight: bold; }
     </style>
 </head>
 <body>
 
     <!-- Navigation -->
-    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto sticky top-0 bg-[#0a0a0a]/90 backdrop-blur-md z-50">
         <div class="flex items-center space-x-3">
-            <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full border-2 gold-border shadow-lg shadow-yellow-900/20">
+            <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full border-2 gold-border">
             <span class="text-xl font-bold tracking-widest uppercase">Altenried</span>
         </div>
         <div class="hidden md:flex space-x-8 font-medium uppercase text-sm tracking-widest">
             <a href="#" class="hover:text-[#c5a059] transition">Home</a>
+            <a href="#fraktionen" class="hover:text-[#c5a059] transition">Fraktionen</a>
             <a href="#team" class="hover:text-[#c5a059] transition">Team</a>
-            <a href="https://discord.gg/QxXQZrNNr7" target="_blank" class="hover:text-[#c5a059] transition">Discord</a>
             <a href="https://discord.gg/QxXQZrNNr7" target="_blank" class="gold-text border gold-border px-4 py-1 rounded hover:bg-[#c5a059] hover:text-black transition uppercase">Join Now</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative h-[75vh] flex items-center justify-center text-center px-4 hero-overlay">
+    <section class="relative h-[70vh] flex items-center justify-center text-center px-4 hero-overlay">
         <div>
             <img src="logo.png" alt="Altenried Logo" class="w-48 h-48 mx-auto mb-8 drop-shadow-[0_0_25px_rgba(197,160,89,0.3)]">
             <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-2">
@@ -48,14 +49,105 @@
                 "Qualität über Quantität"
             </p>
             <div class="mt-10">
-                <a href="https://discord.gg/QxXQZrNNr7" target="_blank" class="inline-block gold-bg text-black px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-lg shadow-yellow-900/20">
+                <a href="https://discord.gg/QxXQZrNNr7" target="_blank" class="inline-block gold-bg text-black px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform">
                     Server Beitreten
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Team / Personen Sektion -->
+    <!-- Fraktionen Sektion -->
+    <section id="fraktionen" class="max-w-7xl mx-auto py-20 px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold uppercase tracking-widest italic">📑 │ Fraktionsübersicht</h2>
+            <div class="h-1 w-20 gold-bg mx-auto mt-4"></div>
+        </div>
+
+        <!-- Staatliche Fraktionen -->
+        <div class="mb-20">
+            <h3 class="text-2xl font-bold mb-8 flex items-center"><i class="fas fa-landmark gold-text mr-4"></i> Staatliche Fraktionen</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Polizei -->
+                <div class="card-gradient p-6 rounded-xl border-l-4 border-blue-500">
+                    <h4 class="text-xl font-bold mb-4 uppercase">🚔 Landespolizei</h4>
+                    <p class="text-xs text-gray-500 mb-4 uppercase">Sicherheit & Ordnung</p>
+                    <div class="text-sm space-y-2">
+                        <p><span class="text-gray-400">Leitung:</span> <span class="status-searching text-xs">WIRD GESUCHT</span></p>
+                        <p><span class="text-gray-400">Stv. Leitung:</span> <span class="status-searching text-xs">WIRD GESUCHT</span></p>
+                        <p><span class="text-gray-400">Discord:</span> <span class="text-xs italic">In Arbeit...</span></p>
+                    </div>
+                </div>
+                <!-- Feuerwehr -->
+                <div class="card-gradient p-6 rounded-xl border-l-4 border-red-500">
+                    <h4 class="text-xl font-bold mb-4 uppercase">🚒 Berufsfeuerwehr</h4>
+                    <p class="text-xs text-gray-500 mb-4 uppercase">Rettung & Brandschutz</p>
+                    <div class="text-sm space-y-2">
+                        <p><span class="text-gray-400">Leitung:</span> Marc Gorda</p>
+                        <p><span class="text-gray-400">Stv. Leitung:</span> <span class="status-searching text-xs">WIRD GESUCHT</span></p>
+                        <p><span class="text-gray-400">Discord:</span> <span class="text-xs italic">In Arbeit...</span></p>
+                    </div>
+                </div>
+                <!-- Rettungsdienst -->
+                <div class="card-gradient p-6 rounded-xl border-l-4 border-orange-500">
+                    <h4 class="text-xl font-bold mb-4 uppercase">🚑 Rettungsdienst</h4>
+                    <p class="text-xs text-gray-500 mb-4 uppercase">Medizinische Hilfe</p>
+                    <div class="text-sm space-y-2">
+                        <p><span class="text-gray-400">Leitung:</span> Ryan Brattan</p>
+                        <p><span class="text-gray-400">Stv. Leitung:</span> <span class="status-searching text-xs">WIRD GESUCHT</span></p>
+                        <a href="https://discord.gg/aQmZgqtd4F" target="_blank" class="text-blue-400 hover:underline text-xs block mt-2 italic">Discord öffnen</a>
+                    </div>
+                </div>
+                <!-- Krankenhaus -->
+                <div class="card-gradient p-6 rounded-xl border-l-4 border-white">
+                    <h4 class="text-xl font-bold mb-4 uppercase">🏥 Krankenhaus</h4>
+                    <p class="text-xs text-gray-500 mb-4 uppercase">Stationäre Pflege</p>
+                    <div class="text-sm space-y-2">
+                        <p><span class="text-gray-400">Leitung:</span> <span class="status-searching text-xs">WIRD GESUCHT</span></p>
+                        <p><span class="text-gray-400">Stv. Leitung:</span> <span class="status-searching text-xs">WIRD GESUCHT</span></p>
+                        <p><span class="text-gray-400">Discord:</span> <span class="text-xs italic">In Arbeit...</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Neutrale & Illegale -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-2xl font-bold mb-8 flex items-center"><i class="fas fa-tools gold-text mr-4"></i> Neutrale Fraktionen</h3>
+                <div class="card-gradient p-6 rounded-xl border-l-4 border-gray-400">
+                    <h4 class="text-xl font-bold mb-4 uppercase">🔧 Mechaniker</h4>
+                    <div class="text-sm space-y-2">
+                        <p><span class="text-gray-400">Leitung:</span> Evan Baumann</p>
+                        <p><span class="text-gray-400">Stv. Leitung:</span> <span class="status-searching text-xs">WIRD GESUCHT</span></p>
+                        <a href="https://discord.gg/mBRErtTTeg" target="_blank" class="text-blue-400 hover:underline text-xs block mt-2 italic">Discord öffnen</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold mb-8 flex items-center"><i class="fas fa-mask gold-text mr-4"></i> Illegale Fraktionen</h3>
+                <div class="card-gradient p-6 rounded-xl border-l-4 border-purple-900">
+                    <h4 class="text-xl font-bold mb-2 uppercase">🕶️ Black Reapers</h4>
+                    <p class="text-xs text-red-500 font-bold mb-4">🚨 STATUS: WIRD GESUCHT (Maximal noch 1!)</p>
+                    <div class="text-sm space-y-2">
+                        <a href="https://discord.gg/mBRErtTTeg" target="_blank" class="text-blue-400 hover:underline text-xs block mt-2 italic">Discord öffnen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Konzept Box -->
+        <div class="mt-20 card-gradient p-10 rounded-2xl text-center border-2 gold-border shadow-2xl shadow-yellow-900/10">
+            <h3 class="text-2xl font-bold mb-4 uppercase">Eigene Fraktion gründen?</h3>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-8">
+                Wir suchen aktuell motivierte Gruppierungen! Reiche dein Konzept über ein Ticket ein oder melde dich bei der Fraktionsverwaltung.
+            </p>
+            <a href="https://discord.gg/QxXQZrNNr7" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-[#c5a059] transition uppercase tracking-widest">
+                <i class="fas fa-ticket-alt mr-2"></i> Ticket erstellen
+            </a>
+        </div>
+    </section>
+
+    <!-- Team Sektion -->
     <section id="team" class="max-w-7xl mx-auto py-20 px-4">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-bold uppercase tracking-widest">Die Projektleitung</h2>
@@ -68,9 +160,9 @@
                 <div class="w-24 h-24 gold-bg rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-black border-4 border-[#161b22]">
                     <i class="fas fa-user-shield"></i>
                 </div>
-                <h3 class="text-xl font-bold uppercase">Name 1</h3>
+                <h3 class="text-xl font-bold uppercase italic font-black text-white">WIRD GESUCHT</h3>
                 <p class="gold-text text-sm font-medium tracking-widest mb-4">PROJEKTLEITUNG</p>
-                <p class="text-gray-400 text-sm">Zuständig für die allgemeine Serverentwicklung und Vision.</p>
+                <p class="text-gray-400 text-sm italic">Zuständig für die allgemeine Serverentwicklung und Vision.</p>
             </div>
 
             <!-- Karte 2 -->
@@ -78,49 +170,19 @@
                 <div class="w-24 h-24 gold-bg rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-black border-4 border-[#161b22]">
                     <i class="fas fa-code"></i>
                 </div>
-                <h3 class="text-xl font-bold uppercase">Name 2</h3>
+                <h3 class="text-xl font-bold uppercase italic font-black text-white">WIRD GESUCHT</h3>
                 <p class="gold-text text-sm font-medium tracking-widest mb-4">DEVELOPMENT</p>
-                <p class="text-gray-400 text-sm">Verantwortlich für Scripte und die technische Performance.</p>
+                <p class="text-gray-400 text-sm italic">Verantwortlich für Scripte und die technische Performance.</p>
             </div>
 
-            <!-- Karte 3 -->
+            <!-- Karte 3 (Beispiel für besetzt) -->
             <div class="card-gradient p-8 rounded-2xl text-center hover:translate-y-[-10px] transition-all duration-300">
                 <div class="w-24 h-24 gold-bg rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-black border-4 border-[#161b22]">
                     <i class="fas fa-users"></i>
                 </div>
-                <h3 class="text-xl font-bold uppercase">Name 3</h3>
+                <h3 class="text-xl font-bold uppercase italic font-black text-white">WIRD GESUCHT</h3>
                 <p class="gold-text text-sm font-medium tracking-widest mb-4">ADMINISTRATION</p>
-                <p class="text-gray-400 text-sm">Ansprechpartner für alle Team- und Spielerbelange.</p>
-            </div>
-
-            <!-- Karte 4 -->
-            <div class="card-gradient p-8 rounded-2xl text-center hover:translate-y-[-10px] transition-all duration-300">
-                <div class="w-24 h-24 gold-bg rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-black border-4 border-[#161b22]">
-                    <i class="fas fa-gavel"></i>
-                </div>
-                <h3 class="text-xl font-bold uppercase">Name 4</h3>
-                <p class="gold-text text-sm font-medium tracking-widest mb-4">SUPPORT-LEITUNG</p>
-                <p class="text-gray-400 text-sm">Sorgt für Gerechtigkeit und Hilfe im Roleplay.</p>
-            </div>
-
-            <!-- Karte 5 -->
-            <div class="card-gradient p-8 rounded-2xl text-center hover:translate-y-[-10px] transition-all duration-300">
-                <div class="w-24 h-24 gold-bg rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-black border-4 border-[#161b22]">
-                    <i class="fas fa-bullhorn"></i>
-                </div>
-                <h3 class="text-xl font-bold uppercase">Name 5</h3>
-                <p class="gold-text text-sm font-medium tracking-widest mb-4">MARKETING</p>
-                <p class="text-gray-400 text-sm">Verantwortlich für Social Media und Community-Growth.</p>
-            </div>
-
-            <!-- Karte 6 -->
-            <div class="card-gradient p-8 rounded-2xl text-center hover:translate-y-[-10px] transition-all duration-300">
-                <div class="w-24 h-24 gold-bg rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-black border-4 border-[#161b22]">
-                    <i class="fas fa-paint-brush"></i>
-                </div>
-                <h3 class="text-xl font-bold uppercase">Name 6</h3>
-                <p class="gold-text text-sm font-medium tracking-widest mb-4">DESIGN</p>
-                <p class="text-gray-400 text-sm">Erstellt Grafiken, Kleidung und Texturen für den Server.</p>
+                <p class="text-gray-400 text-sm italic">Ansprechpartner für alle Team- und Spielerbelange.</p>
             </div>
         </div>
     </section>
