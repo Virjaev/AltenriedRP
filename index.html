@@ -10,9 +10,8 @@
         html { scroll-behavior: smooth; }
         body { background-color: #05070a; color: #ffffff; font-family: 'Inter', sans-serif; }
         
-        /* Neue Blau-Töne passend zum Logo */
-        .blue-text { color: #3b82f6; } /* Helles Blau */
-        .blue-bg { background-color: #1d4ed8; } /* Dunkleres Blau */
+        .blue-text { color: #3b82f6; } 
+        .blue-bg { background-color: #1d4ed8; } 
         .blue-border { border-color: #1d4ed8; }
         
         .card-gradient { 
@@ -23,6 +22,7 @@
             background: radial-gradient(circle, rgba(29, 78, 216, 0.1) 0%, rgba(0,0,0,0) 70%); 
         }
         .status-searching { color: #ff4d4d; font-style: italic; font-weight: bold; }
+        .rank-badge { font-size: 0.65rem; letter-spacing: 0.2em; font-weight: 800; }
     </style>
 </head>
 <body>
@@ -30,9 +30,8 @@
     <!-- Navigation -->
     <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto sticky top-0 bg-[#05070a]/90 backdrop-blur-md z-50">
         <div class="flex items-center space-x-3">
-            <!-- Logo Platzhalter -->
-            <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full border-2 blue-border shadow-lg shadow-blue-900/40">
-            <span class="text-xl font-bold tracking-widest uppercase">Altenried</span>
+            <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full border-2 blue-border">
+            <span class="text-xl font-bold tracking-widest uppercase text-white">Altenried</span>
         </div>
         <div class="hidden md:flex space-x-8 font-medium uppercase text-sm tracking-widest">
             <a href="#" class="hover:text-[#3b82f6] transition">Home</a>
@@ -43,17 +42,16 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative h-[70vh] flex items-center justify-center text-center px-4 hero-overlay">
+    <section class="relative h-[60vh] flex items-center justify-center text-center px-4 hero-overlay">
         <div>
-            <!-- Logo in Groß -->
-            <img src="logo.png" alt="Altenried Logo" class="w-48 h-48 mx-auto mb-8 drop-shadow-[0_0_35px_rgba(29,78,216,0.4)]">
+            <img src="logo.png" alt="Altenried Logo" class="w-40 h-40 mx-auto mb-8 drop-shadow-[0_0_35px_rgba(29,78,216,0.4)]">
             <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-2">
                 Altenried <span class="blue-text">Roleplay</span>
             </h1>
             <p class="text-xl md:text-2xl font-light tracking-[0.3em] text-blue-200/60 uppercase italic">
                 "Qualität über Quantität"
             </p>
-            <div class="mt-10 text-center">
+            <div class="mt-10">
                 <a href="https://discord.gg/QxXQZrNNr7" target="_blank" class="inline-block blue-bg text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-blue-900/30">
                     <i class="fab fa-discord mr-2"></i> Server Beitreten
                 </a>
@@ -64,7 +62,7 @@
     <!-- Fraktionen Sektion -->
     <section id="fraktionen" class="max-w-7xl mx-auto py-20 px-4">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold uppercase tracking-widest italic">📑 │ Fraktionsübersicht</h2>
+            <h2 class="text-3xl font-bold uppercase tracking-widest italic text-white">📑 │ Fraktionsübersicht</h2>
             <div class="h-1 w-20 blue-bg mx-auto mt-4"></div>
         </div>
 
@@ -72,44 +70,31 @@
         <div class="mb-20">
             <h3 class="text-2xl font-bold mb-8 flex items-center"><i class="fas fa-landmark blue-text mr-4"></i> Staatliche Fraktionen</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Polizei -->
                 <div class="card-gradient p-6 rounded-xl border-l-4 border-blue-600">
-                    <h4 class="text-xl font-bold mb-4 uppercase">🚔 Landespolizei</h4>
-                    <p class="text-xs text-gray-500 mb-4 uppercase">Sicherheit & Ordnung</p>
+                    <h4 class="text-xl font-bold mb-4 uppercase text-white">🚔 Landespolizei</h4>
                     <div class="text-sm space-y-2">
-                        <p><span class="text-gray-400">Leitung:</span> <span class="status-searching text-xs">WIRD GESUCHT</span></p>
-                        <p><span class="text-gray-400">Stv. Leitung:</span> <span class="status-searching text-xs">WIRD GESUCHT</span></p>
-                        <p><span class="text-gray-400">Discord:</span> <span class="text-xs italic">In Arbeit...</span></p>
+                        <p><span class="text-gray-400 text-xs">Leitung:</span> <span class="status-searching">WIRD GESUCHT</span></p>
+                        <p><span class="text-gray-400 text-xs">Stv. Leitung:</span> <span class="status-searching">WIRD GESUCHT</span></p>
                     </div>
                 </div>
-                <!-- Feuerwehr -->
                 <div class="card-gradient p-6 rounded-xl border-l-4 border-red-600">
-                    <h4 class="text-xl font-bold mb-4 uppercase">🚒 Berufsfeuerwehr</h4>
-                    <p class="text-xs text-gray-500 mb-4 uppercase">Rettung & Brandschutz</p>
+                    <h4 class="text-xl font-bold mb-4 uppercase text-white">🚒 Feuerwehr</h4>
                     <div class="text-sm space-y-2">
-                        <p><span class="text-gray-400">Leitung:</span> Marc Gorda</p>
-                        <p><span class="text-gray-400">Stv. Leitung:</span> <span class="status-searching text-xs">WIRD GESUCHT</span></p>
-                        <p><span class="text-gray-400">Discord:</span> <span class="text-xs italic">In Arbeit...</span></p>
+                        <p><span class="text-gray-400 text-xs">Leitung:</span> Marc Gorda</p>
+                        <p><span class="text-gray-400 text-xs">Stv. Leitung:</span> <span class="status-searching">WIRD GESUCHT</span></p>
                     </div>
                 </div>
-                <!-- Rettungsdienst -->
                 <div class="card-gradient p-6 rounded-xl border-l-4 border-orange-500">
-                    <h4 class="text-xl font-bold mb-4 uppercase">🚑 Rettungsdienst</h4>
-                    <p class="text-xs text-gray-500 mb-4 uppercase">Medizinische Hilfe</p>
-                    <div class="text-sm space-y-2">
-                        <p><span class="text-gray-400">Leitung:</span> Ryan Brattan</p>
-                        <p><span class="text-gray-400">Stv. Leitung:</span> <span class="status-searching text-xs">WIRD GESUCHT</span></p>
-                        <a href="https://discord.gg/aQmZgqtd4F" target="_blank" class="text-blue-400 hover:underline text-xs block mt-2 italic">Discord öffnen</a>
+                    <h4 class="text-xl font-bold mb-4 uppercase text-white">🚑 Rettungsdienst</h4>
+                    <div class="text-sm space-y-2 text-white">
+                        <p><span class="text-gray-400 text-xs">Leitung:</span> Ryan Brattan</p>
+                        <a href="https://discord.gg/aQmZgqtd4F" target="_blank" class="text-blue-400 hover:underline text-xs block mt-2">Discord</a>
                     </div>
                 </div>
-                <!-- Krankenhaus -->
                 <div class="card-gradient p-6 rounded-xl border-l-4 border-white">
-                    <h4 class="text-xl font-bold mb-4 uppercase">🏥 Krankenhaus</h4>
-                    <p class="text-xs text-gray-500 mb-4 uppercase">Stationäre Pflege</p>
+                    <h4 class="text-xl font-bold mb-4 uppercase text-white">🏥 Krankenhaus</h4>
                     <div class="text-sm space-y-2">
-                        <p><span class="text-gray-400">Leitung:</span> <span class="status-searching text-xs">WIRD GESUCHT</span></p>
-                        <p><span class="text-gray-400">Stv. Leitung:</span> <span class="status-searching text-xs">WIRD GESUCHT</span></p>
-                        <p><span class="text-gray-400">Discord:</span> <span class="text-xs italic">In Arbeit...</span></p>
+                        <p><span class="text-gray-400 text-xs">Leitung:</span> <span class="status-searching">WIRD GESUCHT</span></p>
                     </div>
                 </div>
             </div>
@@ -120,77 +105,81 @@
             <div>
                 <h3 class="text-2xl font-bold mb-8 flex items-center"><i class="fas fa-tools blue-text mr-4"></i> Neutrale Fraktionen</h3>
                 <div class="card-gradient p-6 rounded-xl border-l-4 border-gray-400">
-                    <h4 class="text-xl font-bold mb-4 uppercase">🔧 Mechaniker</h4>
-                    <div class="text-sm space-y-2">
-                        <p><span class="text-gray-400">Leitung:</span> Evan Baumann</p>
-                        <p><span class="text-gray-400">Stv. Leitung:</span> <span class="status-searching text-xs">WIRD GESUCHT</span></p>
-                        <a href="https://discord.gg/mBRErtTTeg" target="_blank" class="text-blue-400 hover:underline text-xs block mt-2 italic">Discord öffnen</a>
-                    </div>
+                    <h4 class="text-xl font-bold mb-4 uppercase text-white">🔧 Mechaniker</h4>
+                    <p class="text-sm"><span class="text-gray-400 text-xs">Leitung:</span> Evan Baumann</p>
+                    <a href="https://discord.gg/mBRErtTTeg" target="_blank" class="text-blue-400 hover:underline text-xs block mt-2 italic">Discord öffnen</a>
                 </div>
             </div>
             <div>
                 <h3 class="text-2xl font-bold mb-8 flex items-center"><i class="fas fa-user-secret blue-text mr-4"></i> Illegale Fraktionen</h3>
                 <div class="card-gradient p-6 rounded-xl border-l-4 border-purple-900">
-                    <h4 class="text-xl font-bold mb-2 uppercase">🕶️ Black Reapers</h4>
-                    <p class="text-xs text-red-500 font-bold mb-4">🚨 STATUS: WIRD GESUCHT (Maximal noch 1!)</p>
-                    <div class="text-sm space-y-2">
-                        <a href="https://discord.gg/mBRErtTTeg" target="_blank" class="text-blue-400 hover:underline text-xs block mt-2 italic">Discord öffnen</a>
-                    </div>
+                    <h4 class="text-xl font-bold mb-2 uppercase text-white">🕶️ Black Reapers</h4>
+                    <p class="text-xs text-red-500 font-bold mb-4 italic italic uppercase tracking-tighter">🚨 Maximal noch 1 gesucht!</p>
+                    <a href="https://discord.gg/mBRErtTTeg" target="_blank" class="text-blue-400 hover:underline text-xs block mt-2 italic">Discord öffnen</a>
                 </div>
             </div>
-        </div>
-
-        <!-- Konzept Box -->
-        <div class="mt-20 card-gradient p-10 rounded-2xl text-center border-2 blue-border shadow-2xl shadow-blue-900/20">
-            <h3 class="text-2xl font-bold mb-4 uppercase text-blue-100">Eigene Fraktion gründen?</h3>
-            <p class="text-gray-400 max-w-2xl mx-auto mb-8">
-                Wir suchen aktuell motivierte Gruppierungen! Reiche dein Konzept über ein Ticket ein oder melde dich bei der Fraktionsverwaltung.
-            </p>
-            <a href="https://discord.gg/QxXQZrNNr7" target="_blank" class="inline-block blue-bg text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-500 transition uppercase tracking-widest shadow-lg shadow-blue-900/50">
-                <i class="fas fa-ticket-alt mr-2"></i> Konzept einreichen
-            </a>
         </div>
     </section>
 
     <!-- Team Sektion -->
-    <section id="team" class="max-w-7xl mx-auto py-20 px-4">
+    <section id="team" class="max-w-7xl mx-auto py-20 px-4 bg-blue-900/5 rounded-3xl">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold uppercase tracking-widest">Die Projektleitung</h2>
+            <h2 class="text-3xl font-bold uppercase tracking-widest text-white">Das Team von Altenried</h2>
             <div class="h-1 w-20 blue-bg mx-auto mt-4"></div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <!-- Team 1 -->
-            <div class="card-gradient p-8 rounded-2xl hover:scale-105 transition-all">
-                <div class="w-20 h-20 blue-bg rounded-full mx-auto mb-6 flex items-center justify-center text-3xl shadow-lg shadow-blue-900/50">
+        <!-- Reihe 1: Inhaber -->
+        <div class="flex flex-wrap justify-center gap-8 mb-12">
+            <!-- Virjaev -->
+            <div class="card-gradient p-8 rounded-2xl w-full md:w-80 text-center border-t-4 border-blue-500 shadow-lg shadow-blue-500/10">
+                <div class="w-16 h-16 blue-bg rounded-full mx-auto mb-4 flex items-center justify-center text-2xl text-white">
                     <i class="fas fa-crown"></i>
                 </div>
-                <h3 class="text-xl font-black uppercase italic">WIRD GESUCHT</h3>
-                <p class="text-blue-400 text-xs font-bold tracking-widest mt-2">PROJEKTLEITUNG</p>
+                <h3 class="text-2xl font-black uppercase tracking-tighter text-white">Virjaev</h3>
+                <p class="blue-text rank-badge uppercase mt-1">Inhaber</p>
             </div>
-            <!-- Team 2 -->
-            <div class="card-gradient p-8 rounded-2xl hover:scale-105 transition-all">
-                <div class="w-20 h-20 blue-bg rounded-full mx-auto mb-6 flex items-center justify-center text-3xl shadow-lg shadow-blue-900/50">
+            <!-- Sanchez -->
+            <div class="card-gradient p-8 rounded-2xl w-full md:w-80 text-center border-t-4 border-blue-500 shadow-lg shadow-blue-500/10">
+                <div class="w-16 h-16 blue-bg rounded-full mx-auto mb-4 flex items-center justify-center text-2xl text-white">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <h3 class="text-2xl font-black uppercase tracking-tighter text-white">Sanchez</h3>
+                <p class="blue-text rank-badge uppercase mt-1">Inhaber</p>
+            </div>
+        </div>
+
+        <!-- Reihe 2: Management & Dev -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Fire -->
+            <div class="card-gradient p-6 rounded-2xl text-center border-t-4 border-blue-800">
+                <div class="w-12 h-12 bg-blue-800/40 rounded-full mx-auto mb-4 flex items-center justify-center text-xl text-blue-400">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="text-xl font-bold uppercase text-white">Fire</h3>
+                <p class="text-gray-400 rank-badge uppercase mt-1">Projektleitung</p>
+            </div>
+            <!-- Brian -->
+            <div class="card-gradient p-6 rounded-2xl text-center border-t-4 border-blue-800">
+                <div class="w-12 h-12 bg-blue-800/40 rounded-full mx-auto mb-4 flex items-center justify-center text-xl text-blue-400">
+                    <i class="fas fa-users-cog"></i>
+                </div>
+                <h3 class="text-xl font-bold uppercase text-white">Brian</h3>
+                <p class="text-gray-400 rank-badge uppercase mt-1 text-[10px]">Team Verwaltung</p>
+            </div>
+            <!-- Leon -->
+            <div class="card-gradient p-6 rounded-2xl text-center border-t-4 border-blue-800">
+                <div class="w-12 h-12 bg-blue-800/40 rounded-full mx-auto mb-4 flex items-center justify-center text-xl text-blue-400">
                     <i class="fas fa-code"></i>
                 </div>
-                <h3 class="text-xl font-black uppercase italic">WIRD GESUCHT</h3>
-                <p class="text-blue-400 text-xs font-bold tracking-widest mt-2">DEVELOPMENT</p>
-            </div>
-            <!-- Team 3 -->
-            <div class="card-gradient p-8 rounded-2xl hover:scale-105 transition-all">
-                <div class="w-20 h-20 blue-bg rounded-full mx-auto mb-6 flex items-center justify-center text-3xl shadow-lg shadow-blue-900/50">
-                    <i class="fas fa-gavel"></i>
-                </div>
-                <h3 class="text-xl font-black uppercase italic">WIRD GESUCHT</h3>
-                <p class="text-blue-400 text-xs font-bold tracking-widest mt-2">ADMINISTRATION</p>
+                <h3 class="text-xl font-bold uppercase text-white">Leon</h3>
+                <p class="text-gray-400 rank-badge uppercase mt-1">Leitungs Entwickler</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 border-t border-blue-950/30 text-center text-gray-500 text-sm">
-        <p>&copy; 2024 Altenried Roleplay. Alle Rechte vorbehalten.</p>
-        <p class="mt-2 tracking-widest uppercase text-[10px] blue-text">Qualität über Quantität</p>
+    <footer class="py-10 text-center text-gray-600 text-[10px] uppercase tracking-[0.3em]">
+        <p>&copy; 2024 Altenried Roleplay</p>
     </footer>
 
 </body>
